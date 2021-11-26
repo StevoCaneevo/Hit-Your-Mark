@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3243958488724520220}
   - component: {fileID: 3243958488725520348}
   - component: {fileID: 2467093632592455716}
+  - component: {fileID: -4512046584644654459}
   m_Layer: 0
   m_Name: PT_Medieval_Sword_01_a
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3243958488727707932}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3243958488724520220
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -97,3 +98,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 40
   cam1: {fileID: 2570106896645816393, guid: d9b4a96c7a9df70409ac9db9bc5068bb, type: 3}
+--- !u!54 &-4512046584644654459
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3243958488727707932}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

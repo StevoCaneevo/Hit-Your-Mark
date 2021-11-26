@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     public float verticalInput;
     public float speed = 10.0f;
     public GameObject projectilePrefab;
+    public float shootforce = 50f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,10 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Launch projectile from player
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            //Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+
+            var instanceArrow = Instantiate(projectilePrefab, transform.position, transform.rotation);
+            instanceArrow.GetComponent<Rigidbody>().AddForce(transform.forward * shootforce);
         }
     }
 }
