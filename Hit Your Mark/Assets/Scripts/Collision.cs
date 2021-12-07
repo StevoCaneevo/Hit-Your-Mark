@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Forward : MonoBehaviour
+public class Collision : MonoBehaviour
 {
-
-    public float speed = 40.0f;
-    public Camera cam1;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +13,12 @@ public class Forward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        Destroy(other.gameObject);
     }
 }

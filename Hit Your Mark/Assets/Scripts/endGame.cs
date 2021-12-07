@@ -5,7 +5,7 @@ using UnityEngine;
 public class endGame : MonoBehaviour
 {
 
-    private float topBound = -270;
+    private float topBound = -254;
     private float lowerBound = -300;
 
     // Start is called before the first frame update

@@ -7,9 +7,7 @@ public class Movement : MonoBehaviour
     public float horizontalInput;
     public float verticalInput;
     public float speed = 30.0f;
-    public GameObject Projectile1;
-    public GameObject Projectile2;
-    public GameObject Projectile3;
+
     public float xRange = 10;
 
 
@@ -36,23 +34,6 @@ public class Movement : MonoBehaviour
             transform.position = new Vector3(23, transform.position.y, transform.position.z);
         }
 
-
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            // Launch projectile from player
-            Instantiate(Projectile1, transform.position, Projectile1.transform.rotation);
-        }
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            // Launch projectile from player
-            Instantiate(Projectile2, transform.position, Projectile2.transform.rotation);
-        }
-
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            // Launch projectile from player
-            Instantiate(Projectile3, transform.position, Projectile3.transform.rotation);
-        }
+      
     }
 }
