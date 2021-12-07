@@ -606,6 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1948329710155936262}
   - component: {fileID: 1948329710165024164}
+  - component: {fileID: 1488186883487500032}
   m_Layer: 0
   m_Name: PT_Medieval_Male_NPC_Skeleton_01
   m_TagString: Untagged
@@ -648,6 +649,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1488186883487500032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948329710155509286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9cda895a88f9c0478774a016bac3465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+  cam1: {fileID: 2570106896645816393, guid: d9b4a96c7a9df70409ac9db9bc5068bb, type: 3}
 --- !u!1 &1948329710155509288
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 970322580}
-  m_IndirectSpecularColor: {r: 0.44824737, g: 0.49827385, b: 0.5755839, a: 1}
+  m_IndirectSpecularColor: {r: 0.44824785, g: 0.4982745, b: 0.5755849, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7074,15 +7074,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592586715}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.17, y: 2.46, z: -259.76}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 13.17, y: 2.46, z: -264.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 198432296}
   - {fileID: 1466174097}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1592586718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7098,8 +7098,10 @@ MonoBehaviour:
   horizontalInput: 0
   verticalInput: 0
   speed: 10
-  projectilePrefab: {fileID: 3243958488727707932, guid: 87d2b1ecfb26a3349af12d1ba83f0883, type: 3}
-  shootforce: 50
+  Projectile1: {fileID: 2445855250282608836, guid: 2ba0663bd48974844bc9183bda97b3d6, type: 3}
+  Projectile2: {fileID: 2445855250282608836, guid: ed1bcc201feb77f44a1e91a5e9f24d10, type: 3}
+  Projectile3: {fileID: 2445855250282608836, guid: 22bbdfa562099ab4aaedcd166bf08115, type: 3}
+  xRange: 10
 --- !u!1001 &1598919902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10441,6 +10443,10 @@ PrefabInstance:
     - target: {fileID: 2570106896645816397, guid: d9b4a96c7a9df70409ac9db9bc5068bb, type: 3}
       propertyPath: m_Name
       value: Camera1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2570106896645816399, guid: d9b4a96c7a9df70409ac9db9bc5068bb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2570106896645816399, guid: d9b4a96c7a9df70409ac9db9bc5068bb, type: 3}
       propertyPath: playerBody
