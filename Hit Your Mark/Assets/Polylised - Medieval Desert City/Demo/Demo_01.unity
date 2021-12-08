@@ -5065,6 +5065,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 40
   cam1: {fileID: 0}
+--- !u!54 &1129183763
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129183758}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1129183764
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129183758}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0016964015, y: 0.00070562493, z: 0.01550456}
+  m_Center: {x: -0.004515896, y: -0.002935224, z: 0.0021257964}
 --- !u!1001 &1134665166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5869,7 +5898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d6ee0259facedd4bb0a98b22f8be21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalPrefabs:
+  spawnPrefabs:
   - {fileID: 1948329710155509286, guid: 38283d0f2f9588c4a90e9a27a86fdbdc, type: 3}
 --- !u!4 &1289680774
 Transform:
