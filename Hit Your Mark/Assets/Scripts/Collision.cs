@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collision : MonoBehaviour
 {
+    public int kills = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +21,6 @@ public class Collision : MonoBehaviour
     {
         Destroy(gameObject);
         Destroy(other.gameObject);
+        kills = 10;
     }
 }
