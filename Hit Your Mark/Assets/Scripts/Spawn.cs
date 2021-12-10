@@ -10,6 +10,7 @@ public class Spawn : MonoBehaviour
     private float startDelay = 2;
     public float spawnInterval = 2.0f;
 
+
     // Start is called before the first frame update
     void Start()
     {
