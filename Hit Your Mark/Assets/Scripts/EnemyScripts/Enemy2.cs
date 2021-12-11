@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collision : MonoBehaviour
+public class Enemy2 : MonoBehaviour
 {
-    public int kills = 0;
-       
-    public GameObject arrow1;
-    public GameObject arrow2;
-    public GameObject arrow3;
-    public GameObject enemy1;
+
+    private shoot Shoot;
+    private int kill = 1;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        Shoot = GameObject.FindObjectOfType<shoot>();
     }
 
     // Update is called once per frame
@@ -26,9 +24,8 @@ public class Collision : MonoBehaviour
     {
         if (other.CompareTag("Arrow"))
         {
-            Debug.Log("HIT1");
-            Destroy(gameObject);
-            Destroy(other.gameObject);
+            Debug.Log("MISS 1");
+            //Destroy(other.gameObject);
         }
 
         if (other.tag == "ArrowFire")
@@ -36,14 +33,14 @@ public class Collision : MonoBehaviour
             Debug.Log("HIT2");
             Destroy(gameObject);
             Destroy(other.gameObject);
+            Shoot.Score(kill);
 
         }
 
         if (other.tag == "ArrowIce")
         {
-            Debug.Log("HIT3");
-            Destroy(gameObject);
-            Destroy(other.gameObject);
+            Debug.Log("MISS 3");
+            //Destroy(other.gameObject);
         }
 
 

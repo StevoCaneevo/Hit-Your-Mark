@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class shoot : MonoBehaviour
 {
 
@@ -13,6 +13,8 @@ public class shoot : MonoBehaviour
     public AudioClip arrowFire;
     public AudioClip arrowIce;
     private AudioSource playerAudio;
+    public Text textKills;
+    private int killed = 0;
 
 
     // Start is called before the first frame update
@@ -31,6 +33,7 @@ public class shoot : MonoBehaviour
             // Launch projectile from player
             Instantiate(Projectile1, transform.position, Projectile1.transform.rotation);
             playerAudio.PlayOneShot(arrow, 0.2f);
+ 
         }
 
         if (Input.GetKeyDown(KeyCode.K))
@@ -47,5 +50,27 @@ public class shoot : MonoBehaviour
             playerAudio.PlayOneShot(arrowIce, 0.2f);
         }
 
+
+
+
+
+
+       
+
+
     }
+
+
+    public void Score(int kills)
+    {
+        
+        killed += kills;
+        textKills.text= "Kills: " + killed;
+        Debug.Log(killed);
+   
+    }
+
+
+
+
 }
