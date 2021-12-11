@@ -20,4 +20,12 @@ public class enemyRun : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     
     }
+
+
+    public float Slowmotion(float time)
+    {
+        speed = time;
+        Debug.Log(speed);
+        return speed;
+    }
 }

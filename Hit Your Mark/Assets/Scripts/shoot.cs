@@ -50,14 +50,6 @@ public class shoot : MonoBehaviour
             playerAudio.PlayOneShot(arrowIce, 0.2f);
         }
 
-
-
-
-
-
-       
-
-
     }
 
 
