@@ -9,11 +9,18 @@ public class Spawn : MonoBehaviour
     private float startDelay = 2;
     public float spawnInterval = 2.0f;
     public int cooldown = 0;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnRandom", startDelay, spawnInterval);
+        gameManager = GameObject.FindObjectOfType<GameManager>();
+
+
+        while (gameManager.isGameActive)
+        {
+            InvokeRepeating("SpawnRandom", startDelay, spawnInterval);
+        }
     }
 
     // Update is called once per frame
@@ -30,7 +37,6 @@ public class Spawn : MonoBehaviour
 
         Vector3 powerUpPos = new Vector3(Random.Range(21, 8),
     2, -300);
-
 
 
         int prefabIndex = Random.Range(0, 2);

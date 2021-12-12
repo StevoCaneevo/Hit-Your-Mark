@@ -2,19 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
-public class EndGame1 : MonoBehaviour
+public class GameManager : MonoBehaviour
 
 {
 
 
     float timeLeft = 0f;
-    float startingTime = 60f;
+    float startingTime = 10f;
     public Text Countdown;
+    public TextMeshProUGUI gameOverText;
+    public bool isGameActive;
+
     // Start is called before the first frame update
     void Start()
     {
         timeLeft = startingTime;
+        isGameActive = true;
     }
 
     // Update is called once per frame
@@ -22,13 +27,20 @@ public class EndGame1 : MonoBehaviour
     {
         timeLeft -= 1 * Time.deltaTime;
         Countdown.text = timeLeft.ToString();
+
+        if(timeLeft < 0)
+        {
+            Debug.Log("Game Over!");
+            GameOver();
+        }
+
+
     }
 
     public void TimeLimit(int time)
     {
         timeLeft += time;
         Debug.Log(time);
-        Debug.Log("AAAAAAAAAAAAAAAA");
 
     }
 
@@ -39,8 +51,15 @@ public class EndGame1 : MonoBehaviour
     {
         time += time;
         Debug.Log(time);
-        Debug.Log("AAAAAAAAAAAAAAAA");
+      
+        
+    }
 
+
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+        isGameActive = false;
     }
 
 
