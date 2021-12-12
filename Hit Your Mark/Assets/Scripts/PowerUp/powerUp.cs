@@ -7,14 +7,14 @@ public class powerUp : MonoBehaviour
 
     private shoot Shoot;
     private int kill = 1;
-    private enemyRun EnemyRun;
-    private float time = 3.0f;
+    private EndGame1 EndGame;
+    private int time = 35;
 
     // Start is called before the first frame update
     void Start()
     {
         Shoot = GameObject.FindObjectOfType<shoot>();
-        EnemyRun = GameObject.FindObjectOfType<enemyRun>();
+        EndGame = GameObject.FindObjectOfType<EndGame1>();
     }
 
     // Update is called once per frame
@@ -26,14 +26,10 @@ public class powerUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
             Debug.Log("Slowmotion!");
             Destroy(gameObject);
             Destroy(other.gameObject);
             Shoot.Score(kill);
-            EnemyRun.Slowmotion(time);
+            EndGame.TimeLimit(time);
         }
-
-
-
     }

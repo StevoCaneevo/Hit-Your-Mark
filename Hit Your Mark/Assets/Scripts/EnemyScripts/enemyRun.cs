@@ -5,8 +5,8 @@ using UnityEngine;
 public class enemyRun : MonoBehaviour
 {
 
-    public float speed = 40.0f;
-   
+    public int speed = 40;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +22,5 @@ public class enemyRun : MonoBehaviour
     }
 
 
-    public float Slowmotion(float time)
-    {
-        speed = time;
-        Debug.Log(speed);
-        return speed;
-    }
+
 }

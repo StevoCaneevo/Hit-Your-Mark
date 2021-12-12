@@ -8,10 +8,11 @@ public class endGame : MonoBehaviour
     private float topBound = -300;
     private float lowerBound = -254;
 
+    
     // Start is called before the first frame update
     void Start()
     {
-
+ 
     }
 
     // Update is called once per frame
@@ -27,4 +28,10 @@ public class endGame : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
+
+
+
 }
+    
