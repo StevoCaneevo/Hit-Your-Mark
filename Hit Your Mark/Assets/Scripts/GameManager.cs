@@ -13,20 +13,22 @@ public class GameManager : MonoBehaviour
     float startingTime = 10f;
     public Text Countdown;
     public TextMeshProUGUI gameOverText;
-    public bool isGameActive;
+    private Spawn spawn;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        spawn = GameObject.FindObjectOfType<Spawn>();
         timeLeft = startingTime;
-        isGameActive = true;
+        spawn.endSpawn = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         timeLeft -= 1 * Time.deltaTime;
-        Countdown.text = timeLeft.ToString();
+        Countdown.text = timeLeft.ToString("0.0");
 
         if(timeLeft < 0)
         {
@@ -37,7 +39,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Application.LoadLevel(0); //Reference in source
+            Application.LoadLevel(0); //1. Reference in source 
         }
 
 
@@ -65,7 +67,8 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
-        isGameActive = false;
+        timeLeft = 0;
+        spawn.endSpawn = true;
     }
 
 

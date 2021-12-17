@@ -7,12 +7,12 @@ public class endGame : MonoBehaviour
 
     private float topBound = -300;
     private float lowerBound = -254;
+    public GameManager gameManager;
 
-    
     // Start is called before the first frame update
     void Start()
     {
- 
+        gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -25,12 +25,9 @@ public class endGame : MonoBehaviour
         else if (transform.position.z > lowerBound)
         {
             Debug.Log("Game Over!");
-            Destroy(gameObject);
+            gameManager.GameOver();
         }
     }
-
-
-
 
 
 }

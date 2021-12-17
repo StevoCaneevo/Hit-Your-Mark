@@ -9,21 +9,34 @@ public class Spawn : MonoBehaviour
     private float startDelay = 2;
     public float spawnInterval = 2.0f;
     public int cooldown = 0;
-    private GameManager gameManager;
+    public bool endSpawn;
+    
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.FindObjectOfType<GameManager>();
 
             InvokeRepeating("SpawnRandom", startDelay, spawnInterval);
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        cooldown = cooldown + 1;   
+        cooldown = cooldown + 1;
+
+
+        if (endSpawn == true)
+        {
+            CancelInvoke("SpawnRandom");
+
+        }
+
+
+
+
     }
 
 
@@ -36,7 +49,7 @@ public class Spawn : MonoBehaviour
     2, -300);
 
 
-        int prefabIndex = Random.Range(0, 2);
+        int prefabIndex = Random.Range(0, 3);
         Instantiate(spawnPrefabs[prefabIndex], spawnPos,
             spawnPrefabs[prefabIndex].transform.rotation);
 
@@ -46,6 +59,12 @@ public class Spawn : MonoBehaviour
             spawnPrefabs[3].transform.rotation);
             cooldown = 0;
         }
+
+
+
+
+
+
     }
 
 
