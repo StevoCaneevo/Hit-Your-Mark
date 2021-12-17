@@ -26,7 +26,6 @@ public class powerUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-            Debug.Log("Slowmotion!");
             Destroy(gameObject);
             Destroy(other.gameObject);
             Shoot.Score(kill);

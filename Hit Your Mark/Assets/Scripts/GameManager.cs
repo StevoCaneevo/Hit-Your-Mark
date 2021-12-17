@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private Spawn spawn;
     private shoot Shoot;
     public TextMeshProUGUI finalScore;
+    public TextMeshProUGUI RforMenu;
 
 
     // Start is called before the first frame update
@@ -35,7 +36,6 @@ public class GameManager : MonoBehaviour
 
         if(timeLeft < 0)
         {
-            Debug.Log("Game Over!");
             GameOver();
         }
 
@@ -51,8 +51,6 @@ public class GameManager : MonoBehaviour
     public void TimeLimit(int time)
     {
         timeLeft += time;
-        Debug.Log(time);
-
     }
 
 
@@ -61,7 +59,7 @@ public class GameManager : MonoBehaviour
     public void EndGame(int time)
     {
         time += time;
-        Debug.Log(time);
+        
       
         
     }
@@ -71,10 +69,11 @@ public class GameManager : MonoBehaviour
     {
         gameOverText.gameObject.SetActive(true);
         finalScore.gameObject.SetActive(true);
+        RforMenu.gameObject.SetActive(true);
         finalScore.SetText("Final Score: " + Shoot.killed);
+
         timeLeft = 0;
         spawn.endSpawn = true;
-        Debug.Log("Final Score: "+ Shoot.killed);
     }
 
 

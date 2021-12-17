@@ -25,20 +25,16 @@ public class Enemy3 : MonoBehaviour
     {
         if (other.CompareTag("Arrow"))
         {
-            Debug.Log("WRONG ARROW");
-            //Destroy(other.gameObject);
+
         }
 
         if (other.tag == "ArrowFire")
         {
-            Debug.Log("WRONG ARROW");
-            //Destroy(other.gameObject);
 
         }
 
         if (other.tag == "ArrowIce")
         {
-            Debug.Log("HIT3");
             Destroy(gameObject);
             Destroy(other.gameObject);
             Shoot.Score(kill);

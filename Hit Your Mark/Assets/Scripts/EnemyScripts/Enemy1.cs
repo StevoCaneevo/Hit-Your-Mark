@@ -25,7 +25,6 @@ public class Enemy1 : MonoBehaviour
     {
         if (other.CompareTag("Arrow"))
         {
-            Debug.Log("HIT1");
             Destroy(gameObject);
             Destroy(other.gameObject);
             Shoot.Score(kill);
@@ -33,15 +32,12 @@ public class Enemy1 : MonoBehaviour
 
         if (other.tag == "ArrowFire")
         {
-            Debug.Log("MISS 2");
-           // Destroy(other.gameObject);
 
         }
 
         if (other.tag == "ArrowIce")
         {
-            Debug.Log("MISS 3");
-            //Destroy(other.gameObject);
+
         }
 
 

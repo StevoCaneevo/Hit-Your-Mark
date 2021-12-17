@@ -6,7 +6,6 @@ public class enemyRun : MonoBehaviour
 {
 
     public float speedIncrease = 10f;
-    private float startDelay = 2;
     public float spawnInterval = 2.0f;
     public Spawn spawn;
 
@@ -14,16 +13,12 @@ public class enemyRun : MonoBehaviour
     void Start()
     {
         spawn = GameObject.FindObjectOfType<Spawn>();
-   
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         transform.Translate(Vector3.forward * Time.deltaTime * spawn.speed);
-        
-
     }
 
 

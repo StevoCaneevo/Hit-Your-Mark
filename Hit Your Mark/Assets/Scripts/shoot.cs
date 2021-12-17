@@ -58,8 +58,6 @@ public class shoot : MonoBehaviour
         
         killed += kills;
         textKills.text= "Kills: " + killed;
-
-        Debug.Log(killed);
    
     }
 
