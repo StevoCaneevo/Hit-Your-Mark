@@ -4,3 +4,4 @@
 3. Bow shoot sounds = https://assetstore.unity.com/packages/audio/sound-fx/weapons/bow-and-hammer-sound-effects-163948
 4. Bow used = https://assetstore.unity.com/packages/3d/props/weapons/stylized-rpg-starter-weapons-184533
 5. Palace = https://assetstore.unity.com/packages/3d/props/weapons/stylized-rpg-starter-weapons-184533
+6. Running animation = https://assetstore.unity.com/packages/3d/characters/low-poly-3d-game-character-1-134237#description
