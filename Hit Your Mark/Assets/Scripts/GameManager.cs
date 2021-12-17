@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
 
     float timeLeft = 0f;
-    float startingTime = 10f;
+    float startingTime = 15f;
     public Text Countdown;
     public TextMeshProUGUI gameOverText;
     private Spawn spawn;

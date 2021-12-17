@@ -8,10 +8,10 @@ public class Spawn : MonoBehaviour
 
     private float startDelay = 2;
     public float spawnInterval = 2.0f;
-    public int cooldown = 0;
+    public float cooldown = 0;
     public bool endSpawn;
     public float speed;
-    private float speedIncrease = 3;
+    private float Increase = 3;
 
 
 
@@ -26,8 +26,12 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cooldown = cooldown + 1;
-        speed += speedIncrease * Time.deltaTime;
+      
+        speed += Increase * Time.deltaTime;
+
+
+        cooldown += Increase * Time.deltaTime;
+
 
         if (endSpawn == true)
         {
@@ -54,7 +58,7 @@ public class Spawn : MonoBehaviour
         Instantiate(spawnPrefabs[prefabIndex], spawnPos,
             spawnPrefabs[prefabIndex].transform.rotation);
 
-        if(cooldown > 2000)
+        if(cooldown > 15)
         {
             Instantiate(spawnPrefabs[3], powerUpPos,
             spawnPrefabs[3].transform.rotation);
