@@ -35,6 +35,12 @@ public class GameManager : MonoBehaviour
         }
 
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Application.LoadLevel(0); //Reference in source
+        }
+
+
     }
 
     public void TimeLimit(int time)

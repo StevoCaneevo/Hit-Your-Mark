@@ -16,11 +16,8 @@ public class Spawn : MonoBehaviour
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
 
-
-        while (gameManager.isGameActive)
-        {
             InvokeRepeating("SpawnRandom", startDelay, spawnInterval);
-        }
+        
     }
 
     // Update is called once per frame
