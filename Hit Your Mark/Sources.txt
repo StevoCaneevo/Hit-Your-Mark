@@ -1,2 +1,6 @@
 
-Game Restart = https://answers.unity.com/questions/1253831/how-to-restart-the-game-2.html
+1. Game Restart = https://answers.unity.com/questions/1253831/how-to-restart-the-game-2.html
+2. Skeleton Enemy = https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/lowpoly-medieval-skeleton-free-pack-181883
+3. Bow shoot sounds = https://assetstore.unity.com/packages/audio/sound-fx/weapons/bow-and-hammer-sound-effects-163948
+4. Bow used = https://assetstore.unity.com/packages/3d/props/weapons/stylized-rpg-starter-weapons-184533
+5. Palace = https://assetstore.unity.com/packages/3d/props/weapons/stylized-rpg-starter-weapons-184533

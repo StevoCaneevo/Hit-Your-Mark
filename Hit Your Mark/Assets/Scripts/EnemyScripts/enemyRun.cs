@@ -5,21 +5,31 @@ using UnityEngine;
 public class enemyRun : MonoBehaviour
 {
 
-    public int speed = 40;
+    public float speedIncrease = 10f;
+    private float startDelay = 2;
+    public float spawnInterval = 2.0f;
+    public Spawn spawn;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        spawn = GameObject.FindObjectOfType<Spawn>();
+   
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
-    
+        transform.Translate(Vector3.forward * Time.deltaTime * spawn.speed);
+        
+
     }
+
+
+
+
+
 
 
 

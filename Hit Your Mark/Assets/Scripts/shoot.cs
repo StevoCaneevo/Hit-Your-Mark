@@ -14,7 +14,7 @@ public class shoot : MonoBehaviour
     public AudioClip arrowIce;
     private AudioSource playerAudio;
     public Text textKills;
-    private int killed = 0;
+    public int killed = 0;
 
 
     // Start is called before the first frame update
@@ -58,6 +58,7 @@ public class shoot : MonoBehaviour
         
         killed += kills;
         textKills.text= "Kills: " + killed;
+
         Debug.Log(killed);
    
     }

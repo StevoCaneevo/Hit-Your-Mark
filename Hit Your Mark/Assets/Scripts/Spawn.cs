@@ -10,7 +10,8 @@ public class Spawn : MonoBehaviour
     public float spawnInterval = 2.0f;
     public int cooldown = 0;
     public bool endSpawn;
-    
+    public float speed;
+    private float speedIncrease = 3;
 
 
 
@@ -26,7 +27,7 @@ public class Spawn : MonoBehaviour
     void Update()
     {
         cooldown = cooldown + 1;
-
+        speed += speedIncrease * Time.deltaTime;
 
         if (endSpawn == true)
         {

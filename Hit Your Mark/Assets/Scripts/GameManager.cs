@@ -14,12 +14,15 @@ public class GameManager : MonoBehaviour
     public Text Countdown;
     public TextMeshProUGUI gameOverText;
     private Spawn spawn;
+    private shoot Shoot;
+    public TextMeshProUGUI finalScore;
 
 
     // Start is called before the first frame update
     void Start()
     {
         spawn = GameObject.FindObjectOfType<Spawn>();
+        Shoot = GameObject.FindObjectOfType<shoot>();
         timeLeft = startingTime;
         spawn.endSpawn = false;
     }
@@ -67,8 +70,11 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
+        finalScore.gameObject.SetActive(true);
+        finalScore.SetText("Final Score: " + Shoot.killed);
         timeLeft = 0;
         spawn.endSpawn = true;
+        Debug.Log("Final Score: "+ Shoot.killed);
     }
 
 
